@@ -1,165 +1,113 @@
-menu.html
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unicomm Coffee · Menu</title>
-
-<style>
-:root{
-  --bg:#0c0d10;
-  --card:#14161d;
-  --text:#f2f3f5;
-  --muted:#a8acb6;
-  --accent:#c6a47e;
-  --line:rgba(255,255,255,.08);
-}
-
-body{
-  margin:0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial;
-  background:var(--bg);
-  color:var(--text);
-  letter-spacing:.4px;
-}
-
-.wrap{
-  max-width:800px;
-  margin:0 auto;
-  padding:60px 20px 80px;
-}
-
-h1{
-  text-align:center;
-  font-size:34px;
-  margin-bottom:10px;
-  font-weight:600;
-}
-
-.subtitle{
-  text-align:center;
-  color:var(--muted);
-  margin-bottom:50px;
-  font-size:14px;
-}
-
-.menu-section{
-  margin-bottom:50px;
-}
-
-.menu-section h2{
-  font-size:14px;
-  letter-spacing:2px;
-  color:var(--accent);
-  margin-bottom:20px;
-}
-
-.item{
-  display:flex;
-  justify-content:space-between;
-  padding:12px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.item-name{
-  font-size:15px;
-}
-
-.item-desc{
-  font-size:12px;
-  color:var(--muted);
-  margin-top:4px;
-}
-
-.price{
-  font-size:14px;
-}
-
-.footer{
-  text-align:center;
-  margin-top:60px;
-  font-size:12px;
-  color:rgba(255,255,255,.5);
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unicomm Coffee · AI David</title>
+  <style>
+    :root{
+      --bg:#0b0c0f; --text:#f2f3f5; --muted:#b8bcc6;
+      --line:rgba(255,255,255,.12); --accent:#c6a47e;
+      --radius:20px; --shadow:0 18px 45px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"PingFang SC","Microsoft YaHei";
+      background: radial-gradient(1200px 500px at 70% 0%, rgba(198,164,126,.12), transparent 60%),
+                  radial-gradient(900px 500px at 0% 10%, rgba(255,255,255,.08), transparent 60%),
+                  var(--bg);
+      letter-spacing:.2px;
+    }
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 70px;}
+    .nav{display:flex; justify-content:space-between; align-items:center; padding:10px 2px 22px;}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.6px;}
+    .dot{width:10px; height:10px; border-radius:999px; background:var(--accent); box-shadow:0 0 0 4px rgba(198,164,126,.18);}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:rgba(255,255,255,.7); font-size:12px;}
+    .hero{
+      border:1px solid var(--line); border-radius:var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      padding:26px;
+    }
+    h1{margin:0; font-size:34px; line-height:1.15;}
+    .subtitle{margin:12px 0 0; color:var(--muted); line-height:1.7;}
+    .btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;}
+    .btn{
+      padding:10px 14px; border-radius:14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.06); color:var(--text); text-decoration:none; font-weight:650;
+      transition:.2s ease;
+    }
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.10);}
+    .btn.primary{background:rgba(198,164,126,.18); border-color:rgba(198,164,126,.35);}
+    .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:18px; margin-top:18px;}
+    @media (max-width:860px){.grid{grid-template-columns:1fr;}}
+    .card{
+      border:1px solid var(--line); border-radius:var(--radius);
+      background: rgba(255,255,255,.04); padding:18px;
+      box-shadow:0 10px 25px rgba(0,0,0,.25);
+    }
+    .card h2{margin:0 0 10px; font-size:16px;}
+    .card p{margin:0; color:var(--muted); line-height:1.7; font-size:14px;}
+    .profile{display:flex; gap:14px; align-items:center; padding:14px; border-radius:18px; border:1px solid var(--line); background:rgba(0,0,0,.22);}
+    .avatar{width:76px; height:76px; border-radius:18px; object-fit:cover; border:1px solid rgba(255,255,255,.14);}
+    .pname{font-weight:800;}
+    .prole{color:var(--muted); font-size:13px; margin-top:4px; line-height:1.5;}
+    .list{margin:10px 0 0 18px; color:var(--muted); line-height:1.7; font-size:14px;}
+    .footer{margin-top:20px; color:rgba(255,255,255,.55); font-size:12px; line-height:1.7;}
+  </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand"><span class="dot"></span> Unicomm Coffee</div>
+      <div class="mono">GitHub Pages · Static Web</div>
+    </div>
 
-<div class="wrap">
+    <section class="hero">
+      <h1>把一杯咖啡，做得更稳定、更好喝。</h1>
+      <p class="subtitle">
+        这是课堂展示项目：用 GitHub 建仓库、写 HTML/CSS，再用 GitHub Pages 部署成真实网址。
+        主题是 <b>AI David</b> —— 你的咖啡冲煮小教练。
+      </p>
+      <div class="btns">
+        <a class="btn primary" href="#recipe">查看手冲配方</a>
+        <a class="btn" href="menu.html">查看菜单</a>
+        <a class="btn" href="#brand">品牌介绍</a>
+      </div>
+    </section>
 
-<h1>Unicomm Coffee</h1>
-<div class="subtitle">Minimal · Premium · Stable Taste</div>
+    <div class="grid">
+      <section class="card" id="brand">
+        <h2>品牌首页 · 简介</h2>
+        <p>
+          <b>Unicomm Coffee</b> 主打“干净、克制、稳定”的出品体验：用清晰配方与可控变量，
+          让顾客每天都能喝到一致的好味道。
+        </p>
+        <p class="footer">可扩展：营业时间 / 门店地址 / 联系方式 / 品牌故事。</p>
+      </section>
 
-<div class="menu-section">
-<h2>ESPRESSO BAR</h2>
+      <aside class="card">
+        <h2>AI David · 小教练</h2>
+        <div class="profile">
+          <img class="avatar" src="aidavid.png" alt="AI David illustration" />
+          <div>
+            <div class="pname">AI David</div>
+            <div class="prole">Coffee Companion · Brew Coach<br/>把步骤变简单，把出品变稳定。</div>
+          </div>
+        </div>
 
-<div class="item">
-<div>
-<div class="item-name">Americano</div>
-<div class="item-desc">Clean, balanced, daily brew</div>
-</div>
-<div class="price">$4</div>
-</div>
+        <h2 id="recipe" style="margin-top:14px;">手冲基础配方</h2>
+        <ul class="list">
+          <li>粉水比：<b>1:15</b>（20g → 300g）</li>
+          <li>水温：<b>92–94°C</b></li>
+          <li>闷蒸：<b>30 秒</b>（约 40g 水）</li>
+          <li>总时长：<b>2:30–3:10</b></li>
+        </ul>
+      </aside>
+    </div>
 
-<div class="item">
-<div>
-<div class="item-name">Latte</div>
-<div class="item-desc">Silky milk, smooth finish</div>
-</div>
-<div class="price">$5</div>
-</div>
-
-<div class="item">
-<div>
-<div class="item-name">Cappuccino</div>
-<div class="item-desc">Foamy top, rich espresso base</div>
-</div>
-<div class="price">$5</div>
-</div>
-
-</div>
-
-<div class="menu-section">
-<h2>HAND DRIP</h2>
-
-<div class="item">
-<div>
-<div class="item-name">Single Origin</div>
-<div class="item-desc">Light roast, floral & bright</div>
-</div>
-<div class="price">$6</div>
-</div>
-
-<div class="item">
-<div>
-<div class="item-name">House Blend</div>
-<div class="item-desc">Nutty, chocolate finish</div>
-</div>
-<div class="price">$5</div>
-</div>
-
-</div>
-
-<div class="menu-section">
-<h2>SIGNATURE</h2>
-
-<div class="item">
-<div>
-<div class="item-name">AI David Special</div>
-<div class="item-desc">Stable 1:15 brew ratio formula</div>
-</div>
-<div class="price">$7</div>
-</div>
-
-</div>
-
-<div class="footer">
-© 2026 Unicomm Coffee · AI David
-</div>
-
-</div>
-
+    <div class="footer">© 2026 Unicomm Coffee · AI David · Hosted on GitHub Pages</div>
+  </div>
 </body>
 </html>
