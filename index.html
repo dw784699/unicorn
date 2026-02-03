@@ -1,1 +1,165 @@
 menu.html
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unicomm Coffee · Menu</title>
+
+<style>
+:root{
+  --bg:#0c0d10;
+  --card:#14161d;
+  --text:#f2f3f5;
+  --muted:#a8acb6;
+  --accent:#c6a47e;
+  --line:rgba(255,255,255,.08);
+}
+
+body{
+  margin:0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial;
+  background:var(--bg);
+  color:var(--text);
+  letter-spacing:.4px;
+}
+
+.wrap{
+  max-width:800px;
+  margin:0 auto;
+  padding:60px 20px 80px;
+}
+
+h1{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:10px;
+  font-weight:600;
+}
+
+.subtitle{
+  text-align:center;
+  color:var(--muted);
+  margin-bottom:50px;
+  font-size:14px;
+}
+
+.menu-section{
+  margin-bottom:50px;
+}
+
+.menu-section h2{
+  font-size:14px;
+  letter-spacing:2px;
+  color:var(--accent);
+  margin-bottom:20px;
+}
+
+.item{
+  display:flex;
+  justify-content:space-between;
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.item-name{
+  font-size:15px;
+}
+
+.item-desc{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:4px;
+}
+
+.price{
+  font-size:14px;
+}
+
+.footer{
+  text-align:center;
+  margin-top:60px;
+  font-size:12px;
+  color:rgba(255,255,255,.5);
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<h1>Unicomm Coffee</h1>
+<div class="subtitle">Minimal · Premium · Stable Taste</div>
+
+<div class="menu-section">
+<h2>ESPRESSO BAR</h2>
+
+<div class="item">
+<div>
+<div class="item-name">Americano</div>
+<div class="item-desc">Clean, balanced, daily brew</div>
+</div>
+<div class="price">$4</div>
+</div>
+
+<div class="item">
+<div>
+<div class="item-name">Latte</div>
+<div class="item-desc">Silky milk, smooth finish</div>
+</div>
+<div class="price">$5</div>
+</div>
+
+<div class="item">
+<div>
+<div class="item-name">Cappuccino</div>
+<div class="item-desc">Foamy top, rich espresso base</div>
+</div>
+<div class="price">$5</div>
+</div>
+
+</div>
+
+<div class="menu-section">
+<h2>HAND DRIP</h2>
+
+<div class="item">
+<div>
+<div class="item-name">Single Origin</div>
+<div class="item-desc">Light roast, floral & bright</div>
+</div>
+<div class="price">$6</div>
+</div>
+
+<div class="item">
+<div>
+<div class="item-name">House Blend</div>
+<div class="item-desc">Nutty, chocolate finish</div>
+</div>
+<div class="price">$5</div>
+</div>
+
+</div>
+
+<div class="menu-section">
+<h2>SIGNATURE</h2>
+
+<div class="item">
+<div>
+<div class="item-name">AI David Special</div>
+<div class="item-desc">Stable 1:15 brew ratio formula</div>
+</div>
+<div class="price">$7</div>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Unicomm Coffee · AI David
+</div>
+
+</div>
+
+</body>
+</html>
