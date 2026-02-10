@@ -56,6 +56,17 @@
     .list{margin:10px 0 0 18px; color:var(--muted); line-height:1.7; font-size:14px;}
     .footer{margin-top:20px; color:rgba(255,255,255,.55); font-size:12px; line-height:1.7;}
   </style>
+ .product-gallery{
+  display:flex;
+  gap:16px;
+  margin:16px 0;
+}
+
+.product-gallery img{
+  width:220px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.15);
+} 
 </head>
 <body>
   <div class="wrap">
@@ -66,11 +77,14 @@
 
     <section class="hero">
       <h1>把一杯咖啡，做得更稳定、更好喝。</h1>
-     <h3>产品展示</h3>
+    <h3>产品展示</h3>
 
-< img src="images/latte.jpg" width="300">
-< img src="images/espresso.jpg" width="300">
-< img src="images/product1.jpg" width="300"> 
+<div class="product-gallery">
+  < img src="images/latte.jpg" alt="Latte">
+  < img src="images/espresso.jpg" alt="Espresso">
+  < img src="images/product1.jpg" alt="Product">
+</div>
+
       <p class="subtitle">
         这是课堂展示项目：用 GitHub 建仓库、写 HTML/CSS，再用 GitHub Pages 部署成真实网址。
         主题是 <b>AI David</b> —— 你的咖啡冲煮小教练。
